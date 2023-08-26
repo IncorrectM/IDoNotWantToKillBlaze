@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "pattern": [
+    " B ",
+    " B ",
+    " B "
+  ],
+  "result": {
+    "item": "minecraft:blaze_rod"
+  },
+  "show_notification": true
+}
