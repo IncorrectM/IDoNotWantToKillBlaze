@@ -39,6 +39,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 )
                 .save(recipeConsumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GUNPOWDER)
+                .requires(Items.CHARCOAL, 1)
+                .requires(Items.SUGAR, 4)
+                .requires(Items.BLAZE_POWDER)
+                .unlockedBy(
+                        "has_diamond",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                ItemPredicate.Builder.item().of(Items.BLAZE_POWDER).build(),
+                                ItemPredicate.Builder.item().of(Items.CHARCOAL).build())
+                )
+                .save(recipeConsumer);
+
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.ENDER_DUST.get()), RecipeCategory.MISC,
                         Items.BLAZE_POWDER, 0.7f, 400)
                 .unlockedBy(
